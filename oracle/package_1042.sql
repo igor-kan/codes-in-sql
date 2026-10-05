@@ -1,0 +1,11 @@
+-- Oracle Package 1042
+CREATE OR REPLACE PACKAGE pkg_1042 AS
+  FUNCTION calc_1042(p_base NUMBER, p_rate NUMBER, p_n INT) RETURN NUMBER;
+END pkg_1042;
+/
+CREATE OR REPLACE PACKAGE BODY pkg_1042 AS
+  FUNCTION calc_1042(p_base NUMBER, p_rate NUMBER, p_n INT) RETURN NUMBER IS
+    v NUMBER:=p_base;
+  BEGIN FOR i IN 1..p_n LOOP v:=v*(1+p_rate); END LOOP; RETURN v; END;
+END pkg_1042;
+/
