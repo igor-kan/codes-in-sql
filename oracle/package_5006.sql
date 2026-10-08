@@ -1,0 +1,11 @@
+-- Oracle Package 5006
+CREATE OR REPLACE PACKAGE pkg_5006 AS
+  FUNCTION calc_5006(p_base NUMBER, p_rate NUMBER, p_n INT) RETURN NUMBER;
+END pkg_5006;
+/
+CREATE OR REPLACE PACKAGE BODY pkg_5006 AS
+  FUNCTION calc_5006(p_base NUMBER, p_rate NUMBER, p_n INT) RETURN NUMBER IS
+    v NUMBER:=p_base;
+  BEGIN FOR i IN 1..p_n LOOP v:=v*(1+p_rate); END LOOP; RETURN v; END;
+END pkg_5006;
+/
