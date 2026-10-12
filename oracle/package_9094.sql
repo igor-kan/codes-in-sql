@@ -1,0 +1,11 @@
+-- Oracle Package 9094
+CREATE OR REPLACE PACKAGE pkg_9094 AS
+  FUNCTION calc_9094(p_base NUMBER, p_rate NUMBER, p_n INT) RETURN NUMBER;
+END pkg_9094;
+/
+CREATE OR REPLACE PACKAGE BODY pkg_9094 AS
+  FUNCTION calc_9094(p_base NUMBER, p_rate NUMBER, p_n INT) RETURN NUMBER IS
+    v NUMBER:=p_base;
+  BEGIN FOR i IN 1..p_n LOOP v:=v*(1+p_rate); END LOOP; RETURN v; END;
+END pkg_9094;
+/
