@@ -1,0 +1,3 @@
+# Microbenchmark configuration and latency profiling for Inter-Row Delta Tracking with LEAD and LAG Functions
+# Module: lead_lag_delta_tracker_sql
+BENCH_ITERATIONS = 50000
