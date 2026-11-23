@@ -1,0 +1,6 @@
+CREATE TABLE d58_parent (pid INTEGER PRIMARY KEY); CREATE TABLE d58_child (cid INTEGER PRIMARY KEY,
+    pid INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS orphan_fk_audit_d58_meta (
+    meta_key TEXT PRIMARY KEY,
+    meta_val TEXT NOT NULL
+);
